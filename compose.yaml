@@ -1,0 +1,75 @@
+name: tablesim
+
+services:
+  tablesim:
+    image: tablesim:cuda12.1
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      network: host
+      args:
+        BASE_IMAGE: ${TABLESIM_BASE_IMAGE:-robotwin:cuda12.1}
+    gpus: all
+    environment:
+      NVIDIA_VISIBLE_DEVICES: ${NVIDIA_VISIBLE_DEVICES:-all}
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility,graphics
+      CUDA_VISIBLE_DEVICES: ${CUDA_VISIBLE_DEVICES:-0}
+      DISPLAY: ${DISPLAY:-}
+      PYTHONPATH: /workspace/TableSim/compat:/workspace/TableSim
+      XDG_CACHE_HOME: /home/tablesim/.cache
+    volumes:
+      - .:/workspace/TableSim
+      - tablesim-cache:/home/tablesim/.cache
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    working_dir: /workspace/TableSim
+    shm_size: 16gb
+    stdin_open: true
+    tty: true
+
+  sam3:
+    profiles: ["sam3"]
+    image: tablesim-sam3:cuda12.1
+    build:
+      context: .
+      dockerfile: docker/sam3.Dockerfile
+      network: host
+      args:
+        BASE_IMAGE: ${SAM3_BASE_IMAGE:-tablesim:cuda12.1}
+        SAM3_COMMIT: 46957e47805eaa273f4aa7bbbd25a88bca9108ce
+    gpus: all
+    environment:
+      NVIDIA_VISIBLE_DEVICES: ${NVIDIA_VISIBLE_DEVICES:-all}
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+      CUDA_VISIBLE_DEVICES: ${SAM3_CUDA_VISIBLE_DEVICES:-0}
+      HF_HOME: /home/tablesim/.cache/huggingface
+      HF_TOKEN: ${HF_TOKEN:-}
+      SAM3_CHECKPOINT: ${SAM3_CHECKPOINT:-/home/tablesim/.cache/huggingface/modelscope/facebook/sam3/sam3.pt}
+      SAM3_DEVICE: cuda
+      SAM3_PRELOAD: ${SAM3_PRELOAD:-0}
+      SAM3_MAX_PROMPTS: ${SAM3_MAX_PROMPTS:-64}
+      HTTP_PROXY: ""
+      HTTPS_PROXY: ""
+      http_proxy: ""
+      https_proxy: ""
+    volumes:
+      - .:/workspace/TableSim:ro
+      - tablesim-sam3-cache:/home/tablesim/.cache/huggingface
+    working_dir: /workspace/TableSim
+    ports:
+      - "127.0.0.1:${SAM3_PORT:-8003}:8003"
+    shm_size: 8gb
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json, urllib.request; data=json.load(urllib.request.urlopen('http://127.0.0.1:8003/health')); assert data['status'] == 'ok'"
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  tablesim-cache:
+  tablesim-sam3-cache:

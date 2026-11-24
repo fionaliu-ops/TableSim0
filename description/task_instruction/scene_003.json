@@ -1,0 +1,11 @@
+{
+  "full_description": "Organize scene 003 by desk region: move the cup to the upper-right, move the phone to the middle, push the keyboard toward the monitor in the upper-middle, and place the mouse in the middle near the keyboard.",
+  "schema": "{A} is the cup, {B} is the phone, {C} is the keyboard, {D} is the mouse, {a} is the left arm, and {b} is the right arm.",
+  "preference": "Use one concise imperative sentence and preserve the four-stage action order.",
+  "seen": [
+    "Use {a} to move {A} upper-right, move {B} middle, push {C} toward the monitor, then place {D} beside {C}."
+  ],
+  "unseen": [
+    "Put {A} in the upper-right, center {B}, push {C} upward, and move {D} next to {C}."
+  ]
+}

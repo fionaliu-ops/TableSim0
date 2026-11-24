@@ -1,0 +1,11 @@
+{
+  "model": "kimi-k3",
+  "base_url": "https://apicz.boyuerichdata.com/v1",
+  "token_env": "TABLESIM_IMAGE_API_TOKEN",
+  "timeout": 600.0,
+  "read_timeout": 300.0,
+  "max_retries": 1,
+  "temperature": 1.0,
+  "max_output_tokens": 16384,
+  "reasoning_effort": "low"
+}

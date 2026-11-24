@@ -1,0 +1,13 @@
+{
+    "contact_points": [
+        {
+            "id": 0,
+            "description": "Left raised-side top/bottom pinch candidate."
+        },
+        {
+            "id": 1,
+            "description": "Right raised-side top/bottom pinch candidate."
+        }
+    ],
+    "functional_points": []
+}

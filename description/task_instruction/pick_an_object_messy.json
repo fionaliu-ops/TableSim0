@@ -1,0 +1,39 @@
+{
+  "full_description": "pick the specified mouse from a cluttered desk scene and lift it clear of the tabletop without disturbing the surrounding objects",
+  "schema": "{A} identifies the mouse to be picked; {a} identifies the arm used to grasp and lift the mouse",
+  "preference": "Use concise pick-and-lift instructions with no more than 22 words. Mention the cluttered desk context when natural.",
+  "seen": [
+    "Use {a} to grasp {A} from the cluttered desk and lift it.",
+    "Pick up {A} from the messy tabletop with {a}.",
+    "Grasp {A} among the desk clutter and raise it clear of the table.",
+    "Use {a} to take {A} from the cluttered scene.",
+    "Lift {A} from the crowded desktop without moving the other objects.",
+    "Reach into the messy desk, grasp {A}, and lift it upward.",
+    "Use {a} to pick {A} and hold it above the tabletop.",
+    "Take {A} from the cluttered desk surface.",
+    "Grasp the target {A} in the messy scene and lift it.",
+    "Use {a} to raise {A} from between the surrounding desk items.",
+    "Pick {A} off the tabletop while avoiding the nearby clutter.",
+    "Lift the specified {A} from the crowded desk.",
+    "Use {a} to grasp and lift {A} from the desk.",
+    "Remove {A} from the messy tabletop by picking it up.",
+    "Reach to {A}, close the gripper, and lift it from the clutter.",
+    "Use {a} to pick up {A} without disturbing the desk objects.",
+    "Grasp {A} from the messy workspace and raise it.",
+    "Lift {A} clear of the table from the cluttered scene.",
+    "Use {a} to take hold of {A} and lift it.",
+    "Pick the target {A} from the cluttered desk."
+  ],
+  "unseen": [
+    "Lift {A} from the messy desk.",
+    "Use {a} to pick up {A}.",
+    "Grasp {A} and raise it above the tabletop.",
+    "Pick {A} from among the clutter.",
+    "Take {A} off the desk surface.",
+    "Use {a} to lift {A} clear of nearby objects.",
+    "Grab {A} from the crowded workspace.",
+    "Raise {A} from the cluttered table.",
+    "Pick up the specified {A}.",
+    "Use {a} to remove {A} from the messy scene."
+  ]
+}

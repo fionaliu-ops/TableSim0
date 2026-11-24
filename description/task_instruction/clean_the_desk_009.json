@@ -1,0 +1,25 @@
+{
+  "full_description": "clean the scene_009 desk in order: close the laptop, place the keyboard and mouse separately on it, move the cup, stack both books on the aligned folder, then arrange the remaining stationery",
+  "schema": "{A} is the laptop; {B} is the keyboard; {C} is the mouse; {D} is the cup; {E} is the folder; {F} is the large book; {G} is the small book; {H} is the glasses; {I} is the pencil; {J} is the scissors; {K} is the sticky notes; {L} is the stapler",
+  "preference": "Preserve the required action order. State that the keyboard and mouse must not overlap and that the books are stacked large-first.",
+  "seen": [
+    "Close {A}; place {B} and {C} separately on it; move {D}; align {E}; stack {F} then {G}; arrange the remaining items.",
+    "Clean the desk in order: close {A}, put {B} and {C} on separate laptop areas, clear {D}, stack the books, and line up the stationery.",
+    "First shut {A}. Put {B} and {C} on top without overlap, relocate {D}, then organize {E}, {F}, {G}, and the small desk items.",
+    "Shut the laptop, store the keyboard and mouse separately on it, move the cup, stack the books on the folder, and arrange all stationery.",
+    "Close {A}, place {B} before {C} on nonoverlapping regions, move {D}, align {E}, add {F} and {G}, then organize {H} through {L}.",
+    "Tidy scene 009: close the computer, place keyboard then mouse on it, clear the cup, build the folder-book stack, and align the loose items.",
+    "Clean the cluttered desk following the specified sequence, keeping {B} and {C} separate and stacking {F} below {G}.",
+    "Close {A}; store {B} and {C} on it without overlap; move {D} to open space; align {E}; stack {F}, {G}; arrange {H}, {I}, {J}, {K}, {L}.",
+    "Organize the desk from laptop to stationery: close it, load keyboard and mouse separately, move the cup, stack folder and books, then form a neat row.",
+    "Complete the ordered desk cleanup, ending with {H}, {I}, {J}, {K}, and {L} neatly placed in the remaining clear area."
+  ],
+  "unseen": [
+    "Close {A}; place {B} and {C} separately; move {D}; align {E}; stack {F} then {G}; arrange {H}, {I}, {J}, {K}, and {L}.",
+    "Close the laptop and clean the desk in the required order.",
+    "Tidy scene 009, keeping the keyboard and mouse separate.",
+    "Move the cup, stack the books on the folder, and arrange the stationery after closing the computer.",
+    "Perform the full ordered desk-cleaning routine.",
+    "Shut {A}, organize {B} through {G}, then line up {H} through {L}."
+  ]
+}

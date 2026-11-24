@@ -1,0 +1,1799 @@
+{
+  "objects": [
+    {
+      "id": "phone_sam3",
+      "name": "phone",
+      "state": "visible on desk",
+      "attributes": {
+        "rigidity": 0.9,
+        "fragility": 0.7,
+        "visibility": "fully_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": false,
+        "electronic": true,
+        "stackable": false,
+        "category": "electronic_device",
+        "confidence": 0.9609375,
+        "bbox": [
+          686.0390014648438,
+          550.2470092773438,
+          761.2658081054688,
+          654.8145141601562
+        ],
+        "xy": [
+          0.706692,
+          0.784545
+        ],
+        "footprint": [
+          0.073464,
+          0.136156
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 6354,
+          "mask_centroid": [
+            720.7736858671703,
+            603.4973245199874
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "phone",
+              "score": 0.9609375,
+              "bbox": [
+                686.0390014648438,
+                550.2470092773438,
+                761.2658081054688,
+                654.8145141601562
+              ],
+              "mask_area": 6354,
+              "centroid": [
+                720.7736858671703,
+                603.4973245199874
+              ],
+              "mask_iou_to_representative": 1.0
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "phone",
+            "mask_cluster": {
+              "cluster_index": 0,
+              "candidate_count": 1,
+              "distinct_label_count": 1,
+              "primary_label": "phone",
+              "primary_label_score": 0.9609375,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "phone",
+                  "score": 0.9609375,
+                  "bbox": [
+                    686.0390014648438,
+                    550.2470092773438,
+                    761.2658081054688,
+                    654.8145141601562
+                  ],
+                  "mask_area": 6354,
+                  "centroid": [
+                    720.7736858671703,
+                    603.4973245199874
+                  ],
+                  "mask_iou_to_representative": 1.0
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "phone",
+            "normalized_label": "phone",
+            "catalog_label": "phone",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": true,
+            "movable": true,
+            "flexible": false,
+            "non_portable": false,
+            "container": false,
+            "openable": false,
+            "stackable": false,
+            "electronic": true,
+            "category": "electronic_device"
+          },
+          "visibility_evidence": [
+            "complete_bbox_without_significant_overlap"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "phone",
+            "score": 0.9609375,
+            "bbox": [
+              686.0390014648438,
+              550.2470092773438,
+              761.2658081054688,
+              654.8145141601562
+            ],
+            "mask_area": 6354,
+            "centroid": [
+              720.7736858671703,
+              603.4973245199874
+            ],
+            "mask_iou_to_representative": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "stapler_sam3",
+      "name": "stapler",
+      "state": "visible on desk",
+      "attributes": {
+        "rigidity": 0.9,
+        "fragility": 0.2,
+        "visibility": "fully_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": true,
+        "electronic": false,
+        "stackable": false,
+        "category": "others",
+        "confidence": 0.9375,
+        "bbox": [
+          123.25318145751953,
+          538.7491455078125,
+          208.82211303710938,
+          597.1653442382812
+        ],
+        "xy": [
+          0.162146,
+          0.739528
+        ],
+        "footprint": [
+          0.083563,
+          0.076063
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 2797,
+          "mask_centroid": [
+            162.75330711476582,
+            564.432963889882
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "stapler",
+              "score": 0.9375,
+              "bbox": [
+                123.25318145751953,
+                538.7491455078125,
+                208.82211303710938,
+                597.1653442382812
+              ],
+              "mask_area": 2797,
+              "centroid": [
+                162.75330711476582,
+                564.432963889882
+              ],
+              "mask_iou_to_representative": 1.0
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "stapler",
+            "mask_cluster": {
+              "cluster_index": 1,
+              "candidate_count": 1,
+              "distinct_label_count": 1,
+              "primary_label": "stapler",
+              "primary_label_score": 0.9375,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "stapler",
+                  "score": 0.9375,
+                  "bbox": [
+                    123.25318145751953,
+                    538.7491455078125,
+                    208.82211303710938,
+                    597.1653442382812
+                  ],
+                  "mask_area": 2797,
+                  "centroid": [
+                    162.75330711476582,
+                    564.432963889882
+                  ],
+                  "mask_iou_to_representative": 1.0
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "stapler",
+            "normalized_label": "stapler",
+            "catalog_label": "stapler",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": false,
+            "movable": true,
+            "flexible": false,
+            "non_portable": false,
+            "container": false,
+            "openable": true,
+            "stackable": false,
+            "electronic": false,
+            "category": "others"
+          },
+          "visibility_evidence": [
+            "complete_bbox_without_significant_overlap"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "stapler",
+            "score": 0.9375,
+            "bbox": [
+              123.25318145751953,
+              538.7491455078125,
+              208.82211303710938,
+              597.1653442382812
+            ],
+            "mask_area": 2797,
+            "centroid": [
+              162.75330711476582,
+              564.432963889882
+            ],
+            "mask_iou_to_representative": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "monitor_sam3",
+      "name": "monitor",
+      "state": "visible on desk",
+      "attributes": {
+        "rigidity": 0.9,
+        "fragility": 0.7,
+        "visibility": "fully_visible",
+        "movable": false,
+        "portable": false,
+        "container": false,
+        "openable": false,
+        "electronic": true,
+        "stackable": false,
+        "category": "electronic_device",
+        "confidence": 0.93359375,
+        "bbox": [
+          461.88946533203125,
+          230.2451934814453,
+          692.3445434570312,
+          397.80511474609375
+        ],
+        "xy": [
+          0.563591,
+          0.408887
+        ],
+        "footprint": [
+          0.225054,
+          0.218177
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 30517,
+          "mask_centroid": [
+            574.6823737588885,
+            299.8473309958384
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "monitor",
+              "score": 0.93359375,
+              "bbox": [
+                461.88946533203125,
+                230.2451934814453,
+                692.3445434570312,
+                397.80511474609375
+              ],
+              "mask_area": 30517,
+              "centroid": [
+                574.6823737588885,
+                299.8473309958384
+              ],
+              "mask_iou_to_representative": 1.0
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "monitor",
+            "mask_cluster": {
+              "cluster_index": 2,
+              "candidate_count": 1,
+              "distinct_label_count": 1,
+              "primary_label": "monitor",
+              "primary_label_score": 0.93359375,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "monitor",
+                  "score": 0.93359375,
+                  "bbox": [
+                    461.88946533203125,
+                    230.2451934814453,
+                    692.3445434570312,
+                    397.80511474609375
+                  ],
+                  "mask_area": 30517,
+                  "centroid": [
+                    574.6823737588885,
+                    299.8473309958384
+                  ],
+                  "mask_iou_to_representative": 1.0
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "monitor",
+            "normalized_label": "monitor",
+            "catalog_label": "monitor",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": true,
+            "movable": false,
+            "flexible": false,
+            "non_portable": true,
+            "container": false,
+            "openable": false,
+            "stackable": false,
+            "electronic": true,
+            "category": "electronic_device"
+          },
+          "visibility_evidence": [
+            "complete_bbox_without_significant_overlap"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "monitor",
+            "score": 0.93359375,
+            "bbox": [
+              461.88946533203125,
+              230.2451934814453,
+              692.3445434570312,
+              397.80511474609375
+            ],
+            "mask_area": 30517,
+            "centroid": [
+              574.6823737588885,
+              299.8473309958384
+            ],
+            "mask_iou_to_representative": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "mouse_sam3",
+      "name": "mouse",
+      "state": "visible on desk",
+      "attributes": {
+        "rigidity": 0.9,
+        "fragility": 0.2,
+        "visibility": "fully_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": false,
+        "electronic": true,
+        "stackable": false,
+        "category": "electronic_device",
+        "confidence": 0.92578125,
+        "bbox": [
+          718.8762817382812,
+          392.49847412109375,
+          766.2289428710938,
+          416.3299255371094
+        ],
+        "xy": [
+          0.725149,
+          0.526581
+        ],
+        "footprint": [
+          0.046243,
+          0.031031
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 837,
+          "mask_centroid": [
+            742.0191158900836,
+            404.0704898446834
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "mouse",
+              "score": 0.92578125,
+              "bbox": [
+                718.8762817382812,
+                392.49847412109375,
+                766.2289428710938,
+                416.3299255371094
+              ],
+              "mask_area": 837,
+              "centroid": [
+                742.0191158900836,
+                404.0704898446834
+              ],
+              "mask_iou_to_representative": 1.0
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "mouse",
+            "mask_cluster": {
+              "cluster_index": 3,
+              "candidate_count": 1,
+              "distinct_label_count": 1,
+              "primary_label": "mouse",
+              "primary_label_score": 0.92578125,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "mouse",
+                  "score": 0.92578125,
+                  "bbox": [
+                    718.8762817382812,
+                    392.49847412109375,
+                    766.2289428710938,
+                    416.3299255371094
+                  ],
+                  "mask_area": 837,
+                  "centroid": [
+                    742.0191158900836,
+                    404.0704898446834
+                  ],
+                  "mask_iou_to_representative": 1.0
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "mouse",
+            "normalized_label": "mouse",
+            "catalog_label": "mouse",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": false,
+            "movable": true,
+            "flexible": false,
+            "non_portable": false,
+            "container": false,
+            "openable": false,
+            "stackable": false,
+            "electronic": true,
+            "category": "electronic_device"
+          },
+          "visibility_evidence": [
+            "complete_bbox_without_significant_overlap"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "mouse",
+            "score": 0.92578125,
+            "bbox": [
+              718.8762817382812,
+              392.49847412109375,
+              766.2289428710938,
+              416.3299255371094
+            ],
+            "mask_area": 837,
+            "centroid": [
+              742.0191158900836,
+              404.0704898446834
+            ],
+            "mask_iou_to_representative": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "keyboard_sam3",
+      "name": "keyboard",
+      "state": "visible on desk",
+      "attributes": {
+        "rigidity": 0.9,
+        "fragility": 0.2,
+        "visibility": "fully_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": false,
+        "electronic": true,
+        "stackable": false,
+        "category": "electronic_device",
+        "confidence": 0.921875,
+        "bbox": [
+          558.8707885742188,
+          423.70587158203125,
+          651.6045532226562,
+          479.8545227050781
+        ],
+        "xy": [
+          0.591052,
+          0.588255
+        ],
+        "footprint": [
+          0.09056,
+          0.07311
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 2123,
+          "mask_centroid": [
+            604.9213377296279,
+            451.2779086198775
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "keyboard",
+              "score": 0.921875,
+              "bbox": [
+                558.8707885742188,
+                423.70587158203125,
+                651.6045532226562,
+                479.8545227050781
+              ],
+              "mask_area": 2123,
+              "centroid": [
+                604.9213377296279,
+                451.2779086198775
+              ],
+              "mask_iou_to_representative": 1.0
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "keyboard",
+            "mask_cluster": {
+              "cluster_index": 4,
+              "candidate_count": 1,
+              "distinct_label_count": 1,
+              "primary_label": "keyboard",
+              "primary_label_score": 0.921875,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "keyboard",
+                  "score": 0.921875,
+                  "bbox": [
+                    558.8707885742188,
+                    423.70587158203125,
+                    651.6045532226562,
+                    479.8545227050781
+                  ],
+                  "mask_area": 2123,
+                  "centroid": [
+                    604.9213377296279,
+                    451.2779086198775
+                  ],
+                  "mask_iou_to_representative": 1.0
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "keyboard",
+            "normalized_label": "keyboard",
+            "catalog_label": "keyboard",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": false,
+            "movable": true,
+            "flexible": false,
+            "non_portable": false,
+            "container": false,
+            "openable": false,
+            "stackable": false,
+            "electronic": true,
+            "category": "electronic_device"
+          },
+          "visibility_evidence": [
+            "complete_bbox_without_significant_overlap"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "keyboard",
+            "score": 0.921875,
+            "bbox": [
+              558.8707885742188,
+              423.70587158203125,
+              651.6045532226562,
+              479.8545227050781
+            ],
+            "mask_area": 2123,
+            "centroid": [
+              604.9213377296279,
+              451.2779086198775
+            ],
+            "mask_iou_to_representative": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "cup_sam3",
+      "name": "cup",
+      "state": "partially visible on desk",
+      "attributes": {
+        "rigidity": 0.9,
+        "fragility": 0.7,
+        "visibility": "partially_visible",
+        "movable": true,
+        "portable": true,
+        "container": true,
+        "openable": false,
+        "electronic": false,
+        "stackable": false,
+        "category": "container",
+        "confidence": 0.859375,
+        "bbox": [
+          441.7989196777344,
+          388.5858154296875,
+          493.4702453613281,
+          461.32989501953125
+        ],
+        "xy": [
+          0.456674,
+          0.553331
+        ],
+        "footprint": [
+          0.05046,
+          0.094719
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 3159,
+          "mask_centroid": [
+            467.7562519784742,
+            422.4286166508389
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "cup",
+              "score": 0.859375,
+              "bbox": [
+                441.7989196777344,
+                388.5858154296875,
+                493.4702453613281,
+                461.32989501953125
+              ],
+              "mask_area": 3159,
+              "centroid": [
+                467.7562519784742,
+                422.4286166508389
+              ],
+              "mask_iou_to_representative": 1.0
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "cup",
+            "mask_cluster": {
+              "cluster_index": 5,
+              "candidate_count": 1,
+              "distinct_label_count": 1,
+              "primary_label": "cup",
+              "primary_label_score": 0.859375,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "cup",
+                  "score": 0.859375,
+                  "bbox": [
+                    441.7989196777344,
+                    388.5858154296875,
+                    493.4702453613281,
+                    461.32989501953125
+                  ],
+                  "mask_area": 3159,
+                  "centroid": [
+                    467.7562519784742,
+                    422.4286166508389
+                  ],
+                  "mask_iou_to_representative": 1.0
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "cup",
+            "normalized_label": "cup",
+            "catalog_label": "cup",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": true,
+            "movable": true,
+            "flexible": false,
+            "non_portable": false,
+            "container": true,
+            "openable": false,
+            "stackable": false,
+            "electronic": false,
+            "category": "container"
+          },
+          "visibility_evidence": [
+            "bbox_overlaps:book_sam3",
+            "bbox_overlaps:book_sam3_2"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "cup",
+            "score": 0.859375,
+            "bbox": [
+              441.7989196777344,
+              388.5858154296875,
+              493.4702453613281,
+              461.32989501953125
+            ],
+            "mask_area": 3159,
+            "centroid": [
+              467.7562519784742,
+              422.4286166508389
+            ],
+            "mask_iou_to_representative": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "book_sam3",
+      "name": "book",
+      "state": "partially visible on desk; articulation:close",
+      "attributes": {
+        "rigidity": 0.35,
+        "fragility": 0.2,
+        "visibility": "partially_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": true,
+        "electronic": false,
+        "stackable": true,
+        "category": "document",
+        "confidence": 0.80859375,
+        "bbox": [
+          403.9350280761719,
+          401.48577880859375,
+          518.2122802734375,
+          460.05181884765625
+        ],
+        "xy": [
+          0.450267,
+          0.560897
+        ],
+        "footprint": [
+          0.111599,
+          0.076258
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 1996,
+          "mask_centroid": [
+            453.4328657314629,
+            429.0085170340681
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "book",
+              "score": 0.80859375,
+              "bbox": [
+                403.9350280761719,
+                401.48577880859375,
+                518.2122802734375,
+                460.05181884765625
+              ],
+              "mask_area": 1996,
+              "centroid": [
+                453.4328657314629,
+                429.0085170340681
+              ],
+              "mask_iou_to_representative": 1.0
+            },
+            {
+              "rank": 2,
+              "label": "notebook",
+              "score": 0.66796875,
+              "bbox": [
+                404.1996154785156,
+                401.049560546875,
+                518.5531005859375,
+                460.191162109375
+              ],
+              "mask_area": 1980,
+              "centroid": [
+                453.50757575757575,
+                429.03434343434344
+              ],
+              "mask_iou_to_representative": 0.98999
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "book",
+            "mask_cluster": {
+              "cluster_index": 6,
+              "candidate_count": 2,
+              "distinct_label_count": 2,
+              "primary_label": "book",
+              "primary_label_score": 0.80859375,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "book",
+                  "score": 0.80859375,
+                  "bbox": [
+                    403.9350280761719,
+                    401.48577880859375,
+                    518.2122802734375,
+                    460.05181884765625
+                  ],
+                  "mask_area": 1996,
+                  "centroid": [
+                    453.4328657314629,
+                    429.0085170340681
+                  ],
+                  "mask_iou_to_representative": 1.0
+                },
+                {
+                  "rank": 2,
+                  "label": "notebook",
+                  "score": 0.66796875,
+                  "bbox": [
+                    404.1996154785156,
+                    401.049560546875,
+                    518.5531005859375,
+                    460.191162109375
+                  ],
+                  "mask_area": 1980,
+                  "centroid": [
+                    453.50757575757575,
+                    429.03434343434344
+                  ],
+                  "mask_iou_to_representative": 0.98999
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "book",
+            "normalized_label": "book",
+            "catalog_label": "book",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": false,
+            "movable": true,
+            "flexible": true,
+            "non_portable": false,
+            "container": false,
+            "openable": true,
+            "stackable": true,
+            "electronic": false,
+            "category": "document"
+          },
+          "visibility_evidence": [
+            "bbox_overlaps:book_sam3_2",
+            "bbox_overlaps:cup_sam3"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "book",
+            "score": 0.80859375,
+            "bbox": [
+              403.9350280761719,
+              401.48577880859375,
+              518.2122802734375,
+              460.05181884765625
+            ],
+            "mask_area": 1996,
+            "centroid": [
+              453.4328657314629,
+              429.0085170340681
+            ],
+            "mask_iou_to_representative": 1.0
+          },
+          {
+            "rank": 2,
+            "label": "notebook",
+            "score": 0.66796875,
+            "bbox": [
+              404.1996154785156,
+              401.049560546875,
+              518.5531005859375,
+              460.191162109375
+            ],
+            "mask_area": 1980,
+            "centroid": [
+              453.50757575757575,
+              429.03434343434344
+            ],
+            "mask_iou_to_representative": 0.98999
+          }
+        ]
+      }
+    },
+    {
+      "id": "book_sam3_2",
+      "name": "book",
+      "state": "partially visible on desk; articulation:open",
+      "attributes": {
+        "rigidity": 0.35,
+        "fragility": 0.2,
+        "visibility": "partially_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": true,
+        "electronic": false,
+        "stackable": true,
+        "category": "document",
+        "confidence": 0.7734375,
+        "bbox": [
+          266.54473876953125,
+          361.08258056640625,
+          507.36968994140625,
+          476.043212890625
+        ],
+        "xy": [
+          0.377888,
+          0.545004
+        ],
+        "footprint": [
+          0.235181,
+          0.149688
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": null,
+        "source": "sam3",
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "detector": "sam3",
+          "mask_area": 11263,
+          "mask_centroid": [
+            370.2450501642546,
+            415.4633756547989
+          ],
+          "label_candidates": [
+            {
+              "rank": 1,
+              "label": "book",
+              "score": 0.7734375,
+              "bbox": [
+                266.54473876953125,
+                361.08258056640625,
+                507.36968994140625,
+                476.043212890625
+              ],
+              "mask_area": 11263,
+              "centroid": [
+                370.2450501642546,
+                415.4633756547989
+              ],
+              "mask_iou_to_representative": 1.0
+            },
+            {
+              "rank": 2,
+              "label": "notebook",
+              "score": 0.72265625,
+              "bbox": [
+                266.8348388671875,
+                361.2607727050781,
+                507.36981201171875,
+                475.837646484375
+              ],
+              "mask_area": 11225,
+              "centroid": [
+                370.0769710467706,
+                415.4974610244989
+              ],
+              "mask_iou_to_representative": 0.995209
+            }
+          ],
+          "detection_metadata": {
+            "prompt": "book",
+            "mask_cluster": {
+              "cluster_index": 7,
+              "candidate_count": 2,
+              "distinct_label_count": 2,
+              "primary_label": "book",
+              "primary_label_score": 0.7734375,
+              "primary_label_policy": "highest_score_for_backward_compatibility",
+              "label_candidates": [
+                {
+                  "rank": 1,
+                  "label": "book",
+                  "score": 0.7734375,
+                  "bbox": [
+                    266.54473876953125,
+                    361.08258056640625,
+                    507.36968994140625,
+                    476.043212890625
+                  ],
+                  "mask_area": 11263,
+                  "centroid": [
+                    370.2450501642546,
+                    415.4633756547989
+                  ],
+                  "mask_iou_to_representative": 1.0
+                },
+                {
+                  "rank": 2,
+                  "label": "notebook",
+                  "score": 0.72265625,
+                  "bbox": [
+                    266.8348388671875,
+                    361.2607727050781,
+                    507.36981201171875,
+                    475.837646484375
+                  ],
+                  "mask_area": 11225,
+                  "centroid": [
+                    370.0769710467706,
+                    415.4974610244989
+                  ],
+                  "mask_iou_to_representative": 0.995209
+                }
+              ]
+            }
+          },
+          "xy_source": "bbox_center",
+          "footprint_source": "bbox_size",
+          "geometry_coordinate_frame": "image_normalized",
+          "object_attribute_catalog": {
+            "source": "/home/ubuntu/Desktop/Liutong/TableSim/image_collectors/object_attributes_with_category.json",
+            "requested_label": "book",
+            "normalized_label": "book",
+            "catalog_label": "book",
+            "used_default": false
+          },
+          "catalog_attributes": {
+            "fragile": false,
+            "movable": true,
+            "flexible": true,
+            "non_portable": false,
+            "container": false,
+            "openable": true,
+            "stackable": true,
+            "electronic": false,
+            "category": "document"
+          },
+          "visibility_evidence": [
+            "bbox_overlaps:book_sam3",
+            "bbox_overlaps:cup_sam3"
+          ]
+        }
+      },
+      "metadata": {
+        "perception_backend": "sam3",
+        "label_candidates": [
+          {
+            "rank": 1,
+            "label": "book",
+            "score": 0.7734375,
+            "bbox": [
+              266.54473876953125,
+              361.08258056640625,
+              507.36968994140625,
+              476.043212890625
+            ],
+            "mask_area": 11263,
+            "centroid": [
+              370.2450501642546,
+              415.4633756547989
+            ],
+            "mask_iou_to_representative": 1.0
+          },
+          {
+            "rank": 2,
+            "label": "notebook",
+            "score": 0.72265625,
+            "bbox": [
+              266.8348388671875,
+              361.2607727050781,
+              507.36981201171875,
+              475.837646484375
+            ],
+            "mask_area": 11225,
+            "centroid": [
+              370.0769710467706,
+              415.4974610244989
+            ],
+            "mask_iou_to_representative": 0.995209
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "phone_sam3",
+      "target": "stapler_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.544546,
+        0.045017
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "monitor_sam3",
+      "relation": "in_front_image",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.143101,
+        0.375658
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "mouse_sam3",
+      "relation": "in_front_image",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.018457,
+        0.257964
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "keyboard_sam3",
+      "relation": "in_front_image",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.11564,
+        0.19629
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "cup_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.250018,
+        0.231214
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "book_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.256425,
+        0.223648
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "book_sam3_2",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.328804,
+        0.239541
+      ]
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "monitor_sam3",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.401445,
+        0.330641
+      ]
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "mouse_sam3",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.563003,
+        0.212947
+      ]
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "keyboard_sam3",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.428906,
+        0.151273
+      ]
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "cup_sam3",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.294528,
+        0.186197
+      ]
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "book_sam3",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.288121,
+        0.178631
+      ]
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "book_sam3_2",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.215742,
+        0.194524
+      ]
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "mouse_sam3",
+      "relation": "left_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.161558,
+        0.117694
+      ]
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "keyboard_sam3",
+      "relation": "behind_image",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.027461,
+        0.179368
+      ]
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "cup_sam3",
+      "relation": "behind_image",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.106917,
+        0.144444
+      ]
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "book_sam3",
+      "relation": "behind_image",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.113324,
+        0.15201
+      ]
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "book_sam3_2",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.185703,
+        0.136117
+      ]
+    },
+    {
+      "source": "mouse_sam3",
+      "target": "keyboard_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.134097,
+        0.061674
+      ]
+    },
+    {
+      "source": "mouse_sam3",
+      "target": "cup_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.268475,
+        0.02675
+      ]
+    },
+    {
+      "source": "mouse_sam3",
+      "target": "book_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.274882,
+        0.034316
+      ]
+    },
+    {
+      "source": "mouse_sam3",
+      "target": "book_sam3_2",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.347261,
+        0.018423
+      ]
+    },
+    {
+      "source": "keyboard_sam3",
+      "target": "cup_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.134378,
+        0.034924
+      ]
+    },
+    {
+      "source": "keyboard_sam3",
+      "target": "book_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.140785,
+        0.027358
+      ]
+    },
+    {
+      "source": "keyboard_sam3",
+      "target": "book_sam3_2",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.213164,
+        0.043251
+      ]
+    },
+    {
+      "source": "cup_sam3",
+      "target": "book_sam3",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.006407,
+        0.007566
+      ]
+    },
+    {
+      "source": "cup_sam3",
+      "target": "book_sam3_2",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.078786,
+        0.008327
+      ]
+    },
+    {
+      "source": "book_sam3",
+      "target": "book_sam3_2",
+      "relation": "right_of",
+      "confidence": 0.4,
+      "metadata": {},
+      "distance": [
+        0.072379,
+        0.015893
+      ]
+    },
+    {
+      "source": "phone_sam3",
+      "target": "mouse_sam3",
+      "relation": "next_to",
+      "confidence": 0.5945187074405032,
+      "metadata": {},
+      "distance": [
+        0.018457,
+        0.257964
+      ],
+      "direction": "right"
+    },
+    {
+      "source": "phone_sam3",
+      "target": "keyboard_sam3",
+      "relation": "next_to",
+      "confidence": 0.6002366329371056,
+      "metadata": {},
+      "distance": [
+        0.11564,
+        0.19629
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "mouse_sam3",
+      "relation": "next_to",
+      "confidence": 0.602720139220206,
+      "metadata": {},
+      "distance": [
+        0.161558,
+        0.117694
+      ],
+      "direction": "right"
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "keyboard_sam3",
+      "relation": "next_to",
+      "confidence": 0.6401594068155605,
+      "metadata": {},
+      "distance": [
+        0.027461,
+        0.179368
+      ],
+      "direction": "right"
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "cup_sam3",
+      "relation": "next_to",
+      "confidence": 0.6282340610283245,
+      "metadata": {},
+      "distance": [
+        0.106917,
+        0.144444
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "book_sam3",
+      "relation": "next_to",
+      "confidence": 0.6214015566256277,
+      "metadata": {},
+      "distance": [
+        0.113324,
+        0.15201
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "monitor_sam3",
+      "target": "book_sam3_2",
+      "relation": "next_to",
+      "confidence": 0.5804689563316938,
+      "metadata": {},
+      "distance": [
+        0.185703,
+        0.136117
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "mouse_sam3",
+      "target": "keyboard_sam3",
+      "relation": "next_to",
+      "confidence": 0.6365197576570335,
+      "metadata": {},
+      "distance": [
+        0.134097,
+        0.061674
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "keyboard_sam3",
+      "target": "cup_sam3",
+      "relation": "next_to",
+      "confidence": 0.6404743003662279,
+      "metadata": {},
+      "distance": [
+        0.134378,
+        0.034924
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "keyboard_sam3",
+      "target": "book_sam3",
+      "relation": "next_to",
+      "confidence": 0.6361819223692046,
+      "metadata": {},
+      "distance": [
+        0.140785,
+        0.027358
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "keyboard_sam3",
+      "target": "book_sam3_2",
+      "relation": "next_to",
+      "confidence": 0.5775051186159997,
+      "metadata": {},
+      "distance": [
+        0.213164,
+        0.043251
+      ],
+      "direction": "left"
+    },
+    {
+      "source": "cup_sam3",
+      "target": "book_sam3",
+      "relation": "overlaps",
+      "confidence": 0.9,
+      "metadata": {},
+      "distance": [
+        0.006407,
+        0.007566
+      ]
+    },
+    {
+      "source": "cup_sam3",
+      "target": "book_sam3_2",
+      "relation": "overlaps",
+      "confidence": 0.9,
+      "metadata": {},
+      "distance": [
+        0.078786,
+        0.008327
+      ]
+    },
+    {
+      "source": "book_sam3",
+      "target": "book_sam3_2",
+      "relation": "overlaps",
+      "confidence": 0.9,
+      "metadata": {},
+      "distance": [
+        0.072379,
+        0.015893
+      ]
+    },
+    {
+      "source": "cup_sam3",
+      "target": "book_sam3",
+      "relation": "on",
+      "metadata": {
+        "source": "assistant_visual_review",
+        "evidence": "inputs/initial.png"
+      }
+    },
+    {
+      "source": "book_sam3",
+      "target": "book_sam3_2",
+      "relation": "on",
+      "metadata": {
+        "source": "assistant_visual_review",
+        "evidence": "inputs/initial.png"
+      }
+    }
+  ],
+  "image_path": "/home/ubuntu/Desktop/Liutong/TableSim/planner_outputs/goal_predictions/kimi_k3_route_smoke_20260917/5d5c466ebde045bbbf304590730c5391/initial_image.png",
+  "instruction": "Organize the desk.",
+  "version": 0,
+  "metadata": {
+    "source": "sam3",
+    "resolution": [
+      1024,
+      768
+    ],
+    "object_level_perception": {
+      "prompts": [
+        "laptop",
+        "notebook",
+        "pen",
+        "cup",
+        "mouse",
+        "book",
+        "keyboard",
+        "paper",
+        "folder",
+        "monitor",
+        "phone",
+        "sticky note",
+        "pencil",
+        "calculator",
+        "scissors",
+        "glasses",
+        "marker",
+        "stapler",
+        "plant",
+        "lamp",
+        "eraser",
+        "paper clip",
+        "candle",
+        "sticker"
+      ],
+      "prompt_count": 24,
+      "raw_detection_count": 10,
+      "mask_cluster_count": 8,
+      "detection_count": 8,
+      "confidence_threshold": 0.5,
+      "cross_prompt_instance_merge": "mask_iou_clustering_with_ranked_label_candidates",
+      "mask_cluster_iou_threshold": 0.8,
+      "primary_label_policy": "highest_score_for_backward_compatibility",
+      "inference_seconds": 0.6635,
+      "device": "cuda",
+      "endpoint": "http://127.0.0.1:8003"
+    },
+    "visibility_policy": {
+      "partial_visibility_sources": [
+        "object_bbox_overlap",
+        "image_boundary"
+      ],
+      "image_boundary_counts_as_partial": true,
+      "robot_auxiliary_detections_count_as_objects": false
+    },
+    "image_geometry": {
+      "coordinate_frame": "image_normalized",
+      "origin": "top_left",
+      "x_axis": "right",
+      "y_axis": "down",
+      "xy": "bbox_center_divided_by_image_size",
+      "footprint": "bbox_size_divided_by_image_size",
+      "image_size": [
+        1024,
+        768
+      ]
+    }
+  }
+}

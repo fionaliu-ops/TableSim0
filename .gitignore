@@ -1,0 +1,142 @@
+# Python / local runtime
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.log
+
+# Local environments
+.venv/
+venv/
+env/
+policy/pi05/.venv/
+.env
+.env.*
+!.env.example
+config/goal_generator.local.json
+.venv-sim/
+.venv-sam3/
+.venv-tools/
+
+# Generated datasets and collection outputs
+data/
+**/.cache/
+**/_traj_data/
+*.hdf5
+*.h5
+*.mp4
+*.avi
+*.mov
+*.pkl
+*.npy
+*.npz
+
+# Training / policy artifacts
+checkpoints/
+policy/**/checkpoints/
+policy/**/wandb/
+policy/**/runs/
+policy/**/outputs/
+policy/**/logs/
+policy/**/training_data/
+
+# Rendered analysis / preview images
+image_collectors/**/*.png
+image_collectors/**/*.jpg
+image_collectors/**/*.jpeg
+image_collectors/**/*.webp
+image_collectors/objects/**
+!image_collectors/objects/
+!image_collectors/objects/README.md
+!image_collectors/scenes/
+!image_collectors/scenes/manifest.json
+planner_outputs/
+videos/
+
+# Local-only progress reports and planning diagrams.
+# These files are intended for personal progress updates and must not be pushed.
+progress_reports/
+
+# Local scene collections, video-derived JSON, and reasoning/rendering outputs.
+# Keep source/configuration files and the small scene_003_scene_graph.json test fixture.
+image_collectors/videos/
+image_collectors/scenes_constrained_v2/
+high_level_planner/reasoning_graph/test_outputs/
+high_level_planner/reasoning_graph/*_reasoning_output/
+high_level_planner/reasoning_graph/initial_simple_scene_graph.json
+high_level_planner/reasoning_graph/*.png
+high_level_planner/reasoning_graph/*.svg
+envs/*_simulation.png
+
+# Downloaded weights and additional generated recordings/archives.
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.ckpt
+*.mkv
+*.webm
+*.m4v
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Downloaded or generated asset binaries.
+# Keep JSON/YAML/URDF/SRDF metadata in git; fetch or generate heavy meshes locally.
+assets/.cache/
+assets/__MACOSX/
+assets/background_texture/
+assets/objects/**/visual/
+assets/objects/**/collision/
+assets/objects/**/textured_objs/
+assets/objects/**/images/
+assets/objects/**/parts_render/
+assets/objects/**/parts_render_after_merging/
+assets/objects/**/point_sample/
+assets/objects/**/*.glb
+assets/objects/**/*.gltf
+assets/objects/**/*.bin
+assets/objects/**/*.obj
+assets/objects/**/*.mtl
+assets/objects/**/*.dae
+assets/objects/**/*.stl
+assets/objects/**/*.ply
+assets/objects/**/*.pts
+assets/objects/**/*.png
+assets/objects/**/*.jpg
+assets/objects/**/*.jpeg
+assets/objects/**/tree_hier*.html
+assets/embodiments/**/meshes/
+assets/embodiments/**/urdf/**/meshes/
+assets/embodiments/**/*.dae
+assets/embodiments/**/*.stl
+assets/embodiments/**/*.obj
+assets/embodiments/**/*.glb
+
+# Third-party nested git metadata should not be committed into this repository.
+**/.git/
+
+# Local policy caches and converted datasets.
+policy/pi05/hf_cache/
+policy/pi05/lerobot_data/
+policy/pi05/openpi_cache/
+
+# Publish only the reviewed latest scene 003 validation bundle.
+dynamic_test_output/*
+!dynamic_test_output/scene003_safe_image_goal_20260927_full_v4/
+!dynamic_test_output/scene003_safe_image_goal_20260927_full_v4/**
+dynamic_test_output/scene003_safe_image_goal_20260927_full_v4/operation_head_camera.mp4
+dynamic_test_output/scene003_safe_image_goal_20260927_full_v4/operation_head_camera.zip
+!dynamic_test_output/scene003_safety_goal_fix_20260927.md
+!dynamic_test_output/scene_003_assistant_goal/
+dynamic_test_output/scene_003_assistant_goal/*
+!dynamic_test_output/scene_003_assistant_goal/terminal_image_v2.png
+
+# Crash dumps
+/core.[0-9]*

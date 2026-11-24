@@ -1,0 +1,95 @@
+{
+  "objects": [
+    {
+      "id": "a",
+      "name": "book",
+      "state": "on desk",
+      "attributes": {
+        "rigidity": 0.8,
+        "fragility": 0.2,
+        "visibility": "fully_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": false,
+        "electronic": false,
+        "stackable": false,
+        "category": "document",
+        "confidence": 1.0,
+        "bbox": null,
+        "xy": [
+          0.2,
+          0.3
+        ],
+        "footprint": [
+          0.08,
+          0.06
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": 35.0,
+        "source": null,
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "geometry_frame": "image_normalized"
+        }
+      },
+      "metadata": {}
+    },
+    {
+      "id": "b",
+      "name": "book",
+      "state": "on desk",
+      "attributes": {
+        "rigidity": 0.8,
+        "fragility": 0.2,
+        "visibility": "fully_visible",
+        "movable": true,
+        "portable": true,
+        "container": false,
+        "openable": false,
+        "electronic": false,
+        "stackable": false,
+        "category": "document",
+        "confidence": 1.0,
+        "bbox": null,
+        "xy": [
+          0.8,
+          0.7
+        ],
+        "footprint": [
+          0.08,
+          0.06
+        ],
+        "height": null,
+        "z_offset": 0.0,
+        "yaw_degrees": 40.0,
+        "source": null,
+        "model_id": null,
+        "kind": null,
+        "extra": {
+          "geometry_frame": "image_normalized"
+        }
+      },
+      "metadata": {}
+    }
+  ],
+  "relations": [],
+  "image_path": null,
+  "instruction": null,
+  "version": 0,
+  "metadata": {
+    "planning_context": {
+      "workspace": {
+        "frame": "image_normalized",
+        "bounds": [
+          0.05,
+          0.05,
+          0.95,
+          0.95
+        ]
+      }
+    }
+  }
+}

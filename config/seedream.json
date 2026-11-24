@@ -1,0 +1,9 @@
+{
+  "model": "doubao-seedream-5-0-260128",
+  "base_url": "https://apicz.boyuerichdata.com/v1",
+  "token_env": "TABLESIM_IMAGE_API_TOKEN",
+  "size": "2K",
+  "response_format": "b64_json",
+  "watermark": false,
+  "timeout": 300.0
+}

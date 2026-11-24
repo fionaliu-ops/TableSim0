@@ -1,0 +1,11 @@
+{
+  "full_description": "Arrange the remaining scene 003 objects compactly in front of the monitor, away from table edges. Move the cup aside, push the book and keyboard into place, position the mouse, put the cup on the small book, bring the closed stapler into the group, and position the phone.",
+  "schema": "Seven objects including the fixed monitor. The large book is removed. The small book starts on the table and the cup starts on it. Use physical contact, pushing for book and keyboard relocation, and verified grasps for lifting.",
+  "preference": "Use a compact layout close to the monitor with generous table-edge clearance. Keep object parameters unchanged. The large book is absent and the cup is supported by the small book.",
+  "seen": [
+    "Arrange the objects compactly in front of the monitor, away from the table edges, with the cup on the small book."
+  ],
+  "unseen": [
+    "Bring the book, keyboard, mouse, phone and closed stapler together near the display, leaving the front table area clear and placing the cup on the book."
+  ]
+}

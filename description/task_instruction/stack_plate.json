@@ -1,0 +1,39 @@
+{
+  "full_description": "lift the bowl from the movable plate, place the bowl on the table, and stack the exposed plate accurately on the plates at the left",
+  "schema": "{A} identifies the bowl to be lifted and placed on the table; {B} identifies the movable plate to be stacked on the existing plates",
+  "preference": "Use clear dual-arm instructions with no more than 25 words. Preserve the action order: move the bowl, then stack the plate.",
+  "seen": [
+    "Lift {A} from {B}, set it on the table, then stack {B} on the left plates.",
+    "Move {A} off {B} and place {B} accurately on the existing plate stack.",
+    "Use the right arm to relocate {A}, then use the left arm to stack {B}.",
+    "Raise {A}, place it clear of the plates, and align {B} with the left stack.",
+    "Remove {A} from {B}, set it safely on the table, then stack {B} neatly.",
+    "Hold {A} above {B}, move it aside, and place {B} on the stacked plates.",
+    "Pick up {A}, clear {B}, then carry {B} to the top of the left stack.",
+    "Relocate {A} to an open tabletop area and center {B} on the left plates.",
+    "Lift and move {A} away before stacking {B} precisely on the other plates.",
+    "Take {A} off {B}, place it on the table, and add {B} to the left stack.",
+    "Move {A} aside with one arm and stack {B} with the other arm.",
+    "Clear {B} by lifting {A}, then align and lower {B} onto the plate stack.",
+    "Place {A} safely on the tabletop, then center {B} over the left stack.",
+    "Lift {A} ten centimeters, move it aside, then stack {B} on the left.",
+    "Remove {A} carefully and place {B} as the top plate of the stack.",
+    "Set {A} away from all plates, then place {B} squarely on the left stack.",
+    "Use both arms: move {A} to the table and stack {B} on the left plates.",
+    "Raise and relocate {A}, then grasp the rim of {B} and stack it accurately.",
+    "Move {A} without disturbing {B}, then place {B} at the center of the stack.",
+    "Take {A} from {B}, set it down, then align {B} over the stacked plates."
+  ],
+  "unseen": [
+    "Move {A} off {B}, then stack {B} on the left plates.",
+    "Set {A} on the table and align {B} with the plate stack.",
+    "Lift {A}, clear {B}, and stack {B} neatly on the left.",
+    "Relocate {A} before centering {B} on the existing stack.",
+    "Remove {A} and place {B} on top of the other plates.",
+    "Put {A} safely aside, then add {B} to the left stack.",
+    "Clear the plate by moving {A}, then stack {B} accurately.",
+    "Move {A} to the tabletop and lower {B} onto the plate stack.",
+    "Raise {A} from {B}, then position {B} over the left plates.",
+    "Place {A} away from the plates and stack {B} at the left."
+  ]
+}

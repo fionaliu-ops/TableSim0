@@ -1,0 +1,120 @@
+{
+    "center": [
+        0.0,
+        0.155,
+        0.0
+    ],
+    "extents": [
+        0.055,
+        0.31,
+        0.26
+    ],
+    "scale": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "transform_matrix": [
+        [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+        ],
+        [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        ]
+    ],
+    "target_pose": [
+        [
+            [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.31
+            ],
+            [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ]
+    ],
+    "contact_points_pose": [
+        [
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                -1.0,
+                0.0,
+                0.0,
+                0.27
+            ],
+            [
+                0.0,
+                0.0,
+                1.0,
+                0.065
+            ],
+            [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        ]
+    ],
+    "functional_matrix": [],
+    "orientation_point": [],
+    "contact_points_group": [],
+    "contact_points_mask": [],
+    "target_point_description": [
+        "Center point on the top surface."
+    ],
+    "contact_points_description": [
+        "Candidate top approach; jaws close across binder thickness."
+    ],
+    "functional_point_description": [],
+    "orientation_point_description": [],
+    "stable": true,
+    "grasp_design": {
+        "schema": "graspable_desk_asset_v1",
+        "type": "filled_hard_cover_binder",
+        "placement": "upright",
+        "closing_width_m": 0.055,
+        "candidate_opening_m": 0.065,
+        "physics_grasp_verified": false
+    }
+}

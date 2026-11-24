@@ -1,0 +1,21 @@
+L515:
+  fovy: 45
+  w: 320
+  h: 180
+
+Large_L515:
+  fovy: 45
+  w: 640
+  h: 360
+
+D435:
+  fovy: 37
+  # TableSim project-wide RGB resolution. Keep this profile at 640x480 so
+  # every existing and newly-created task using the default D435 stays HD.
+  w: 640
+  h: 480
+
+Large_D435:
+  fovy: 37
+  w: 640
+  h: 480

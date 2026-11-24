@@ -1,0 +1,968 @@
+{
+  "schema_version": "1.0",
+  "scene_id": "scene_003",
+  "created_at": "2026-09-19T03:03:56.604929+00:00",
+  "provenance": {
+    "author": "current_assistant",
+    "method": "direct_visual_interpretation_of_two_images",
+    "external_model_called": false,
+    "inputs": [
+      {
+        "role": "initial",
+        "path": "inputs/initial.png",
+        "original_path": "planner_outputs/scene_003_kimi_api_unique_goal_20260919/inputs/initial.png",
+        "sha256": "acc8ea3160d3e9df3dbfb6c8941da477e64e2acfffa543ecc62d95ee8dcde0ad",
+        "width": 1024,
+        "height": 768
+      },
+      {
+        "role": "terminal",
+        "path": "inputs/terminal_layout.png",
+        "original_path": "planner_outputs/scene_003_kimi_api_unique_goal_20260919/inputs/terminal_layout.png",
+        "sha256": "bc321081f83fdda5020e79451764ea67e7af7691812b297e95281fdf132b4063",
+        "width": 1024,
+        "height": 768
+      }
+    ],
+    "scene_graph_used_as_input": false,
+    "extra_goal_rules_injected": false,
+    "explanation_type": "observable_evidence_and_concise_action_rationales_not_private_chain_of_thought"
+  },
+  "status": "proposed_plan_not_executed",
+  "scope": "根据当前 scene_003 初始照片与 kimi 终态布局图直接制定中间动作；不读取旧动作计划作为本次输入。",
+  "coordinate_convention": {
+    "origin": "top_left",
+    "u": "x / image_width",
+    "v": "y / image_height",
+    "units": "unitless_image_coordinates",
+    "purpose": "粗略定位参考，非抓取点、接触点或机器人坐标",
+    "registration": "先按桌面可见后沿和侧沿建立视觉方向，再比较物体相对位置。存在视差和重绘变形，不假设始末图严格共面映射。",
+    "real_world_dimensions_required": false
+  },
+  "objects": [
+    {
+      "id": "monitor",
+      "name": "显示器",
+      "initial": "桌面后部中央，带底座",
+      "target": "保留在后部中央",
+      "confidence": "high"
+    },
+    {
+      "id": "book_light_blue",
+      "name": "浅蓝色书",
+      "initial": "左侧摊开，右侧被深蓝色书和杯子遮挡",
+      "target": "合上并位于深蓝色书上方",
+      "confidence": "high"
+    },
+    {
+      "id": "book_dark_blue",
+      "name": "深蓝色书",
+      "initial": "闭合，覆盖浅蓝色书右侧的一部分",
+      "target": "位于左侧书堆下层",
+      "confidence": "high"
+    },
+    {
+      "id": "cup",
+      "name": "花纹杯",
+      "initial": "直立，投影覆盖深蓝色书；具体接触面被遮挡",
+      "target": "直立，位于书堆前右侧；支撑物不确定",
+      "confidence": "medium"
+    },
+    {
+      "id": "keyboard",
+      "name": "键盘",
+      "initial": "显示器前方偏右，长轴明显倾斜",
+      "target": "显示器前方，长轴更接近桌沿方向",
+      "confidence": "high"
+    },
+    {
+      "id": "mouse",
+      "name": "鼠标",
+      "initial": "显示器右前方",
+      "target": "键盘右侧且略靠后",
+      "confidence": "high"
+    },
+    {
+      "id": "stapler",
+      "name": "订书机",
+      "initial": "桌面左前侧，上下部件有间隙",
+      "target": "仍在左前侧；示意图不能确定铰链状态变化",
+      "confidence": "medium"
+    },
+    {
+      "id": "phone",
+      "name": "手机",
+      "initial": "桌面右前侧",
+      "target": "仍在右前侧，屏幕朝上",
+      "confidence": "high"
+    }
+  ],
+  "uncertainties": [
+    {
+      "id": "U1",
+      "issue": "终态杯子的支撑面",
+      "evidence": "杯底接近深蓝色下层书前缘，且遮住浅蓝色上层书的边缘；二维绘图不能唯一确定接触关系。",
+      "handling": "主候选为下层深蓝色书前右侧露出的区域，但不把它写成已确认的 on 关系。A05 先用当前视觉确认接触区域和承载稳定性；无法确认时暂停该放置动作。"
+    },
+    {
+      "id": "U2",
+      "issue": "跨图坐标不可直接作为位移",
+      "evidence": "终态是简化布局图，桌沿、显示器比例及视角与初始照片不同。",
+      "handling": "图像坐标仅用于定位区域；在线利用桌沿与物体相对位置进行视觉对准，不直接计算像素差作为机器人位移。"
+    },
+    {
+      "id": "U3",
+      "issue": "订书机的开合状态",
+      "evidence": "始末图均有上下部件分离的外观，绘制风格不同。",
+      "handling": "不指定 close_stapler；仅在相对位置或朝向不符时调整摆放。"
+    },
+    {
+      "id": "U4",
+      "issue": "书堆和杯子的实际稳定性",
+      "evidence": "绘图显示浅蓝色书横跨深蓝色书，无法得出真实尺寸、质心或摩擦系数。",
+      "handling": "放置前根据可见接触区域选点，释放前确认支撑并在释放后复查；本计划不宣称已验证物理可执行性。"
+    },
+    {
+      "id": "U5",
+      "issue": "手机和订书机是否需要移动",
+      "evidence": "两者保持同一桌面分区，像素变化可能来自图像重绘。",
+      "handling": "A08、A09 是条件动作：桌面相对位置与目标一致时跳过。"
+    }
+  ],
+  "assumptions": [
+    "具备抓取、稳定放置、平面转向及合书能力；这些是执行能力假设，未在机器人上验证。",
+    "遵循给定终态图的摆放，不额外注入整理规则。",
+    "图像中八件物体身份一致；颜色、屏幕内容及简化外形差异不产生更换物体或修改屏幕的动作。"
+  ],
+  "actions": [
+    {
+      "id": "A01",
+      "object_id": "cup",
+      "skill": "pick_and_place",
+      "description": "保持直立，将杯子移至桌面中央偏前的临时空区。",
+      "depends_on": [],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "识别杯体和可抓取部位",
+        "从当前视角确认缓冲区空闲、远离桌沿且不占用书堆目标区"
+      ],
+      "concise_rationale": "先解除杯子对书本操作的遮挡和潜在载荷。",
+      "state_updates": {
+        "cup": {
+          "location": "temporary_buffer",
+          "support": "table",
+          "pose": "upright"
+        }
+      },
+      "visual_verification": [
+        "杯子稳定直立",
+        "两本书上方不再有杯子"
+      ],
+      "destination": {
+        "image": "initial",
+        "approximate_center_uv": [
+          0.52,
+          0.76
+        ],
+        "relation": "桌面中央偏前的空区",
+        "role": "candidate_buffer_not_calibrated_pose"
+      }
+    },
+    {
+      "id": "A02",
+      "object_id": "book_dark_blue",
+      "skill": "pick_and_place",
+      "description": "将深蓝色闭合书从浅蓝色书上移开，放到左侧书堆的下层目标位置。",
+      "depends_on": [
+        "A01"
+      ],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "杯子已离开书区",
+        "搬运路径和落点不与仍摊开的浅蓝色书相交；不满足时先临时移至另一空区，再放到目标位"
+      ],
+      "concise_rationale": "露出浅蓝色书的闭合区域，同时建立终态书堆的底层。",
+      "state_updates": {
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        }
+      },
+      "visual_verification": [
+        "浅蓝色书的闭合区域无压载",
+        "深蓝色书平放且目标区域可供叠书"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.347,
+          0.653
+        ],
+        "relation": "左侧书堆下层",
+        "role": "visual_region"
+      }
+    },
+    {
+      "id": "A03",
+      "object_id": "book_light_blue",
+      "skill": "close_book",
+      "description": "在桌面支撑下合上浅蓝色书。",
+      "depends_on": [
+        "A02"
+      ],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "书面和书页运动区域无杯子及深蓝色书",
+        "具备可控制书脊及书页的闭合能力"
+      ],
+      "concise_rationale": "初始图书页摊开，终态图显示浅蓝色封面和闭合书体。",
+      "state_updates": {
+        "book_light_blue": {
+          "location": "left_work_area",
+          "support": "table",
+          "articulation": "closed"
+        }
+      },
+      "visual_verification": [
+        "两侧书页合拢",
+        "封面朝上且书体没有压住其他物体"
+      ],
+      "destination": null
+    },
+    {
+      "id": "A04",
+      "object_id": "book_light_blue",
+      "skill": "pick_and_place",
+      "description": "将闭合的浅蓝色书放到深蓝色书上，按目标图大致对齐书堆方向。",
+      "depends_on": [
+        "A03"
+      ],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "下层深蓝色书已就位",
+        "根据当前视觉确认上层书获得稳定支撑"
+      ],
+      "concise_rationale": "终态明确呈现深蓝色在下、浅蓝色在上的叠放关系。",
+      "state_updates": {
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        }
+      },
+      "visual_verification": [
+        "浅蓝色书位于深蓝色书上方",
+        "两书闭合，书堆稳定",
+        "杯子的候选落点未被完全遮住"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.361,
+          0.617
+        ],
+        "relation": "深蓝色书上方",
+        "role": "visual_region"
+      }
+    },
+    {
+      "id": "A05",
+      "object_id": "cup",
+      "skill": "inspect_support_then_pick_and_place",
+      "description": "核实书堆前右侧的支撑面，再将杯子从临时区移到该目标区域并保持直立。",
+      "depends_on": [
+        "A04"
+      ],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "书堆稳定",
+        "已通过当前视觉确认杯子落点及支撑面；若不能确认则保持在缓冲区，不执行放置",
+        "落点不会妨碍书堆稳定"
+      ],
+      "concise_rationale": "终态要求杯子位于书堆前右侧，但示意图不能唯一确定它放在哪一层上。",
+      "state_updates": {
+        "cup": {
+          "location": "stack_front_right",
+          "support": "visually_confirmed_at_execution",
+          "pose": "upright"
+        }
+      },
+      "visual_verification": [
+        "杯子直立且释放后稳定",
+        "相对书堆的前右位置符合目标",
+        "记录实际支撑物，不能仅凭投影重叠判定 on"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.391,
+          0.628
+        ],
+        "relation": "书堆前右侧",
+        "role": "visual_region",
+        "support_hypothesis": "book_dark_blue_exposed_front_area",
+        "support_confirmed": false
+      }
+    },
+    {
+      "id": "A06",
+      "object_id": "keyboard",
+      "skill": "pick_and_place_with_yaw",
+      "description": "将键盘调整至显示器前方，长轴方向与目标图中的桌面横向大致一致。",
+      "depends_on": [],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "键盘落点空闲",
+        "调整不碰到杯子缓冲区和书堆"
+      ],
+      "concise_rationale": "键盘是始末图中朝向变化最明显的独立桌面物体。",
+      "state_updates": {
+        "keyboard": {
+          "location": "in_front_of_monitor",
+          "support": "table",
+          "orientation": "approximately_along_desk_width"
+        }
+      },
+      "visual_verification": [
+        "位于显示器前方",
+        "长轴接近目标朝向，未遮挡其他物体"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.606,
+          0.638
+        ],
+        "relation": "显示器前方",
+        "role": "visual_region"
+      }
+    },
+    {
+      "id": "A07",
+      "object_id": "mouse",
+      "skill": "pick_and_place",
+      "description": "将鼠标对齐到键盘右侧略靠后的位置。",
+      "depends_on": [
+        "A06"
+      ],
+      "execution_mode": "required",
+      "condition": null,
+      "preconditions": [
+        "键盘位置已确定",
+        "键盘右侧空闲"
+      ],
+      "concise_rationale": "以键盘为参照能避免把绘图中的桌面整体变形误当成鼠标位移。",
+      "state_updates": {
+        "mouse": {
+          "location": "right_and_slightly_behind_keyboard",
+          "support": "table"
+        }
+      },
+      "visual_verification": [
+        "鼠标在键盘右侧并留有可见间隔"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.723,
+          0.603
+        ],
+        "relation": "键盘右侧略靠后",
+        "role": "visual_region"
+      }
+    },
+    {
+      "id": "A08",
+      "object_id": "phone",
+      "skill": "inspect_then_adjust_pose",
+      "description": "检查手机相对桌沿的位置与朝向；确有偏差时调整，保持屏幕朝上。",
+      "depends_on": [],
+      "execution_mode": "conditional",
+      "condition": "仅当相对桌沿的位置或朝向不符合目标时移动，否则检查通过后跳过移动。",
+      "preconditions": [
+        "通过桌沿和物体相对位置比较，排除绘图风格造成的表观位移"
+      ],
+      "concise_rationale": "两图中手机都处于右前侧，不能仅凭像素差认定必须移动。",
+      "state_updates": {
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up",
+          "goal_region_checked": true
+        }
+      },
+      "visual_verification": [
+        "仍在桌面右前侧",
+        "屏幕朝上，不要求改变屏幕内容"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.718,
+          0.84
+        ],
+        "relation": "桌面右前侧",
+        "role": "visual_region"
+      }
+    },
+    {
+      "id": "A09",
+      "object_id": "stapler",
+      "skill": "inspect_then_adjust_pose",
+      "description": "检查订书机在左前侧的摆放，仅在需要时调整位置或平面朝向。",
+      "depends_on": [],
+      "execution_mode": "conditional",
+      "condition": "仅当桌面相对位置或朝向不符合目标时移动，否则检查通过后跳过移动。",
+      "preconditions": [
+        "已区分摆放差异与绘图外观差异"
+      ],
+      "concise_rationale": "终态图不能可靠证明需要合上订书机，因此不增加开合动作。",
+      "state_updates": {
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged",
+          "goal_region_checked": true
+        }
+      },
+      "visual_verification": [
+        "仍在桌面左前侧",
+        "不根据简化轮廓强行改变铰链状态"
+      ],
+      "destination": {
+        "image": "terminal",
+        "approximate_center_uv": [
+          0.166,
+          0.77
+        ],
+        "relation": "桌面左前侧",
+        "role": "visual_region"
+      }
+    }
+  ],
+  "state_sequence": [
+    {
+      "id": "S00",
+      "after_action": null,
+      "status": "image_interpretation_not_measured",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_work_area",
+          "support": "table",
+          "articulation": "open"
+        },
+        "book_dark_blue": {
+          "location": "over_right_part_of_light_book",
+          "support": "book_light_blue_hypothesis",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "over_book_region",
+          "support": "book_dark_blue_hypothesis",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "front_right_of_monitor",
+          "support": "table",
+          "orientation": "diagonal"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S01",
+      "after_action": "A01",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_work_area",
+          "support": "table",
+          "articulation": "open"
+        },
+        "book_dark_blue": {
+          "location": "over_right_part_of_light_book",
+          "support": "book_light_blue_hypothesis",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "temporary_buffer",
+          "support": "table",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "front_right_of_monitor",
+          "support": "table",
+          "orientation": "diagonal"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S02",
+      "after_action": "A02",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_work_area",
+          "support": "table",
+          "articulation": "open"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "temporary_buffer",
+          "support": "table",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "front_right_of_monitor",
+          "support": "table",
+          "orientation": "diagonal"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S03",
+      "after_action": "A03",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_work_area",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "temporary_buffer",
+          "support": "table",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "front_right_of_monitor",
+          "support": "table",
+          "orientation": "diagonal"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S04",
+      "after_action": "A04",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "temporary_buffer",
+          "support": "table",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "front_right_of_monitor",
+          "support": "table",
+          "orientation": "diagonal"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S05",
+      "after_action": "A05",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "stack_front_right",
+          "support": "visually_confirmed_at_execution",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "front_right_of_monitor",
+          "support": "table",
+          "orientation": "diagonal"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S06",
+      "after_action": "A06",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "stack_front_right",
+          "support": "visually_confirmed_at_execution",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "in_front_of_monitor",
+          "support": "table",
+          "orientation": "approximately_along_desk_width"
+        },
+        "mouse": {
+          "location": "right_front_of_monitor",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S07",
+      "after_action": "A07",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "stack_front_right",
+          "support": "visually_confirmed_at_execution",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "in_front_of_monitor",
+          "support": "table",
+          "orientation": "approximately_along_desk_width"
+        },
+        "mouse": {
+          "location": "right_and_slightly_behind_keyboard",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up"
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S08",
+      "after_action": "A08",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "stack_front_right",
+          "support": "visually_confirmed_at_execution",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "in_front_of_monitor",
+          "support": "table",
+          "orientation": "approximately_along_desk_width"
+        },
+        "mouse": {
+          "location": "right_and_slightly_behind_keyboard",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up",
+          "goal_region_checked": true
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged"
+        }
+      }
+    },
+    {
+      "id": "S09",
+      "after_action": "A09",
+      "status": "predicted_if_preconditions_pass",
+      "objects": {
+        "monitor": {
+          "location": "back_center",
+          "support": "table",
+          "fixed": true
+        },
+        "book_light_blue": {
+          "location": "left_stack_top",
+          "support": "book_dark_blue",
+          "articulation": "closed"
+        },
+        "book_dark_blue": {
+          "location": "left_stack_base",
+          "support": "table",
+          "articulation": "closed"
+        },
+        "cup": {
+          "location": "stack_front_right",
+          "support": "visually_confirmed_at_execution",
+          "pose": "upright"
+        },
+        "keyboard": {
+          "location": "in_front_of_monitor",
+          "support": "table",
+          "orientation": "approximately_along_desk_width"
+        },
+        "mouse": {
+          "location": "right_and_slightly_behind_keyboard",
+          "support": "table"
+        },
+        "phone": {
+          "location": "front_right",
+          "support": "table",
+          "pose": "screen_up",
+          "goal_region_checked": true
+        },
+        "stapler": {
+          "location": "front_left",
+          "support": "table",
+          "articulation": "unresolved_unchanged",
+          "goal_region_checked": true
+        }
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "before": "A01",
+      "after": "A02"
+    },
+    {
+      "before": "A02",
+      "after": "A03"
+    },
+    {
+      "before": "A03",
+      "after": "A04"
+    },
+    {
+      "before": "A04",
+      "after": "A05"
+    },
+    {
+      "before": "A06",
+      "after": "A07"
+    }
+  ],
+  "execution_summary": {
+    "listed_stages": 9,
+    "required_action_stages": 7,
+    "conditional_inspection_adjustment_stages": 2,
+    "nominal_order": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "A09"
+    ],
+    "count_note": "阶段数不是机器人原子动作数；A02 可能需要额外中转，A05 必须先确认支撑面，A08/A09 可跳过移动。",
+    "partial_order_note": "书堆链 A01→A02→A03→A04→A05；键鼠链 A06→A07。两条链及 A08/A09 在空间无冲突时可换序。"
+  },
+  "final_checks": [
+    "八件物体均保留，显示器未移动",
+    "浅蓝色书闭合并位于深蓝色书上",
+    "杯子直立、位于书堆前右侧且实际支撑已确认",
+    "键盘位于显示器前方并调整朝向，鼠标位于其右侧",
+    "手机在右前、订书机在左前；忽略绘图风格差异",
+    "缓冲区已清空，各物体均在桌面支持范围内"
+  ],
+  "limitations": [
+    "始末图只能支持一种合理的候选动作流程，不能证明真实发生过该过程或其步数最优。",
+    "没有进行物理执行、碰撞检测、抓取可达性验证或真实尺度标定。",
+    "在 A05 支撑面未确认前，不能声称获得唯一且物理有效的完整终态支撑图。"
+  ]
+}

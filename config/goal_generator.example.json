@@ -1,0 +1,15 @@
+{
+  "reasoning": {
+    "url": "https://apicz.boyuerichdata.com/v1",
+    "model": "kimi-k3",
+    "api_token": "",
+    "temperature": 1.0,
+    "timeout": 600,
+    "reasoning_effort": "low"
+  },
+  "image": {
+    "url": "https://apicz.boyuerichdata.com/v1",
+    "model": "kimi-k3",
+    "api_token": ""
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "object_id": "monitor_sam3",
+      "region": "unknown",
+      "state": "on desk; screen showing blue landscape graphic",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.561,
+          0.379
+        ]
+      }
+    },
+    {
+      "object_id": "book_sam3_2",
+      "region": "unknown",
+      "state": "on desk; articulation:close",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "book_sam3",
+        "xy": [
+          0.335,
+          0.615
+        ]
+      }
+    },
+    {
+      "object_id": "book_sam3",
+      "region": "unknown",
+      "state": "on desk; articulation:close",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.323,
+          0.667
+        ]
+      }
+    },
+    {
+      "object_id": "cup_sam3",
+      "region": "unknown",
+      "state": "upright on books",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "book_sam3_2",
+        "xy": [
+          0.389,
+          0.628
+        ]
+      }
+    },
+    {
+      "object_id": "keyboard_sam3",
+      "region": "unknown",
+      "state": "on desk",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.606,
+          0.64
+        ]
+      }
+    },
+    {
+      "object_id": "mouse_sam3",
+      "region": "unknown",
+      "state": "on desk",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.723,
+          0.603
+        ]
+      }
+    },
+    {
+      "object_id": "stapler_sam3",
+      "region": "unknown",
+      "state": "on desk; articulation:close",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.163,
+          0.774
+        ]
+      }
+    },
+    {
+      "object_id": "phone_sam3",
+      "region": "unknown",
+      "state": "on desk; screen on with orange display",
+      "visibility": "fully_visible",
+      "placement": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.716,
+          0.836
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "book_sam3_2",
+      "target": "book_sam3",
+      "relation": "on"
+    },
+    {
+      "source": "cup_sam3",
+      "target": "book_sam3_2",
+      "relation": "on"
+    },
+    {
+      "source": "mouse_sam3",
+      "target": "keyboard_sam3",
+      "relation": "right_of"
+    },
+    {
+      "source": "stapler_sam3",
+      "target": "book_sam3",
+      "relation": "left_of"
+    }
+  ]
+}

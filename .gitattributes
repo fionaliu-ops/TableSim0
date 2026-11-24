@@ -1,0 +1,6 @@
+assets/embodiments/** !text !filter !merge !diff
+assets/objects/objaverse/** !text !filter !merge !diff
+dynamic_test_output/scene003_safe_image_goal_20260927_full_v4/*.mp4 filter=lfs diff=lfs merge=lfs -text
+dynamic_test_output/scene_003_assistant_goal/terminal_image_v2.png filter=lfs diff=lfs merge=lfs -text
+dynamic_test_output/scene003_safe_image_goal_20260927_full_v4/**/*.png filter=lfs diff=lfs merge=lfs -text
+image_collectors/scenes_new_0929_1000_organized/*.png filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,249 @@
+[
+  {
+    "action_type": "move",
+    "source_object_id": "cup_sam3",
+    "target": "table",
+    "instruction": "move cup away at image_normalized xy=[0.4375, 0.6875] yaw=0deg",
+    "parameters": {
+      "placement_target": {
+        "kind": "pose_constraint",
+        "reference": "table",
+        "parameters": {
+          "pose": {
+            "frame": "image_normalized",
+            "xy": [
+              0.4375,
+              0.6875
+            ],
+            "yaw_degrees": 0.0,
+            "support": "table",
+            "candidate_id": "pose_57a19855325a"
+          }
+        }
+      },
+      "pose": {
+        "frame": "image_normalized",
+        "xy": [
+          0.4375,
+          0.6875
+        ],
+        "yaw_degrees": 0.0,
+        "support": "table",
+        "candidate_id": "pose_57a19855325a"
+      },
+      "placement_purpose": "temporary_unblock",
+      "action_label": "move cup away at image_normalized xy=[0.4375, 0.6875] yaw=0deg"
+    }
+  },
+  {
+    "action_type": "move",
+    "source_object_id": "book_sam3",
+    "target": "table",
+    "instruction": "move book away at image_normalized xy=[0.323, 0.667] yaw=0deg",
+    "parameters": {
+      "placement_target": {
+        "kind": "pose_constraint",
+        "reference": "table",
+        "parameters": {
+          "pose": {
+            "frame": "image_normalized",
+            "support": "table",
+            "xy": [
+              0.323,
+              0.667
+            ]
+          }
+        }
+      },
+      "pose": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.323,
+          0.667
+        ]
+      },
+      "action_label": "move book away at image_normalized xy=[0.323, 0.667] yaw=0deg"
+    }
+  },
+  {
+    "action_type": "close",
+    "source_object_id": "book_sam3_2",
+    "target": null,
+    "instruction": "close book",
+    "parameters": {
+      "action_label": "close book"
+    }
+  },
+  {
+    "action_type": "stack",
+    "source_object_id": "book_sam3_2",
+    "target": "book_sam3",
+    "instruction": "stack book -> book",
+    "parameters": {
+      "relative_pose": {
+        "frame": "image_normalized",
+        "support": "book_sam3",
+        "xy": [
+          0.335,
+          0.615
+        ]
+      },
+      "placement_target": {
+        "kind": "support_surface",
+        "reference": "book_sam3",
+        "parameters": {
+          "relative_pose": {
+            "frame": "image_normalized",
+            "support": "book_sam3",
+            "xy": [
+              0.335,
+              0.615
+            ]
+          }
+        }
+      },
+      "action_label": "stack book -> book"
+    }
+  },
+  {
+    "action_type": "move",
+    "source_object_id": "mouse_sam3",
+    "target": "table",
+    "instruction": "move mouse -> table at image_normalized xy=[0.723, 0.603] yaw=0deg",
+    "parameters": {
+      "placement_target": {
+        "kind": "pose_constraint",
+        "reference": "table",
+        "parameters": {
+          "pose": {
+            "frame": "image_normalized",
+            "support": "table",
+            "xy": [
+              0.723,
+              0.603
+            ]
+          }
+        }
+      },
+      "placement_purpose": "at_pose",
+      "pose": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.723,
+          0.603
+        ]
+      },
+      "action_label": "move mouse -> table at image_normalized xy=[0.723, 0.603] yaw=0deg"
+    }
+  },
+  {
+    "action_type": "move",
+    "source_object_id": "keyboard_sam3",
+    "target": "table",
+    "instruction": "move keyboard -> table at image_normalized xy=[0.606, 0.64] yaw=0deg",
+    "parameters": {
+      "placement_target": {
+        "kind": "pose_constraint",
+        "reference": "table",
+        "parameters": {
+          "pose": {
+            "frame": "image_normalized",
+            "support": "table",
+            "xy": [
+              0.606,
+              0.64
+            ]
+          }
+        }
+      },
+      "placement_purpose": "at_pose",
+      "category": "electronic_device",
+      "pose": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.606,
+          0.64
+        ]
+      },
+      "action_label": "move keyboard -> table at image_normalized xy=[0.606, 0.64] yaw=0deg"
+    }
+  },
+  {
+    "action_type": "place",
+    "source_object_id": "cup_sam3",
+    "target": "book_sam3_2",
+    "instruction": "place cup -> book",
+    "parameters": {
+      "relative_pose": {
+        "frame": "image_normalized",
+        "support": "book_sam3_2",
+        "xy": [
+          0.389,
+          0.628
+        ]
+      },
+      "support_placement": true,
+      "placement_target": {
+        "kind": "support_surface",
+        "reference": "book_sam3_2",
+        "parameters": {
+          "relative_pose": {
+            "frame": "image_normalized",
+            "support": "book_sam3_2",
+            "xy": [
+              0.389,
+              0.628
+            ]
+          },
+          "support_placement": true
+        }
+      },
+      "action_label": "place cup -> book"
+    }
+  },
+  {
+    "action_type": "close",
+    "source_object_id": "stapler_sam3",
+    "target": null,
+    "instruction": "close stapler",
+    "parameters": {
+      "action_label": "close stapler"
+    }
+  },
+  {
+    "action_type": "move",
+    "source_object_id": "phone_sam3",
+    "target": "table",
+    "instruction": "move phone -> table at image_normalized xy=[0.716, 0.836] yaw=0deg",
+    "parameters": {
+      "placement_target": {
+        "kind": "pose_constraint",
+        "reference": "table",
+        "parameters": {
+          "pose": {
+            "frame": "image_normalized",
+            "support": "table",
+            "xy": [
+              0.716,
+              0.836
+            ]
+          }
+        }
+      },
+      "placement_purpose": "at_pose",
+      "category": "electronic_device",
+      "pose": {
+        "frame": "image_normalized",
+        "support": "table",
+        "xy": [
+          0.716,
+          0.836
+        ]
+      },
+      "action_label": "move phone -> table at image_normalized xy=[0.716, 0.836] yaw=0deg"
+    }
+  }
+]

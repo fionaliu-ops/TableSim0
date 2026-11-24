@@ -1,0 +1,188 @@
+{
+  "schema": "tablesim.reasoning_graph.v5",
+  "node_semantics": "simple_scene_graph(nodes=object_id|region|state|yaw|visibility|optional_placement,edges=source|target|relation)",
+  "edge_semantics": "skill_grounded_atomic_action_subtask",
+  "nodes": [
+    {
+      "id": "S0",
+      "description": "S0",
+      "scene_state": null,
+      "completed": false,
+      "metadata": {
+        "goal_report": {
+          "goal_checks": {
+            "p": false
+          }
+        }
+      }
+    },
+    {
+      "id": "S1",
+      "description": "S1",
+      "scene_state": null,
+      "completed": false,
+      "metadata": {
+        "goal_report": {
+          "goal_checks": {
+            "p": false
+          }
+        }
+      }
+    },
+    {
+      "id": "S2",
+      "description": "S2",
+      "scene_state": null,
+      "completed": false,
+      "metadata": {
+        "goal_report": {
+          "goal_checks": {
+            "p": false
+          }
+        }
+      }
+    },
+    {
+      "id": "G",
+      "description": "G",
+      "scene_state": null,
+      "completed": false,
+      "metadata": {
+        "goal_report": {
+          "goal_checks": {
+            "p": true
+          }
+        },
+        "goal": true,
+        "terminal": true
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from_state": "S0",
+      "to_state": "S1",
+      "action": "move book",
+      "action_type": "move",
+      "cost": 1.0,
+      "instruction": null,
+      "object_target": {
+        "source": "a",
+        "target": "table"
+      },
+      "parameters": {},
+      "preconditions": [],
+      "effects": [],
+      "skill": {
+        "name": "pick_and_place",
+        "execution_skill": "pick_and_place",
+        "semantic_assignment": false,
+        "local_goal": {
+          "description": "Place a in table.",
+          "predicates": [
+            "region(a)=table"
+          ],
+          "verifier": "scene_graph_transition"
+        },
+        "parameters": {}
+      },
+      "constraints": [],
+      "metadata": {}
+    },
+    {
+      "from_state": "S1",
+      "to_state": "G",
+      "action": "move book",
+      "action_type": "move",
+      "cost": 1.0,
+      "instruction": null,
+      "object_target": {
+        "source": "a",
+        "target": "table"
+      },
+      "parameters": {},
+      "preconditions": [],
+      "effects": [],
+      "skill": {
+        "name": "pick_and_place",
+        "execution_skill": "pick_and_place",
+        "semantic_assignment": false,
+        "local_goal": {
+          "description": "Place a in table.",
+          "predicates": [
+            "region(a)=table"
+          ],
+          "verifier": "scene_graph_transition"
+        },
+        "parameters": {}
+      },
+      "constraints": [],
+      "metadata": {}
+    },
+    {
+      "from_state": "S0",
+      "to_state": "S2",
+      "action": "move book",
+      "action_type": "move",
+      "cost": 4.0,
+      "instruction": null,
+      "object_target": {
+        "source": "a",
+        "target": "table"
+      },
+      "parameters": {},
+      "preconditions": [],
+      "effects": [],
+      "skill": {
+        "name": "pick_and_place",
+        "execution_skill": "pick_and_place",
+        "semantic_assignment": false,
+        "local_goal": {
+          "description": "Place a in table.",
+          "predicates": [
+            "region(a)=table"
+          ],
+          "verifier": "scene_graph_transition"
+        },
+        "parameters": {}
+      },
+      "constraints": [],
+      "metadata": {}
+    },
+    {
+      "from_state": "S2",
+      "to_state": "G",
+      "action": "move book",
+      "action_type": "move",
+      "cost": 4.0,
+      "instruction": null,
+      "object_target": {
+        "source": "a",
+        "target": "table"
+      },
+      "parameters": {},
+      "preconditions": [],
+      "effects": [],
+      "skill": {
+        "name": "pick_and_place",
+        "execution_skill": "pick_and_place",
+        "semantic_assignment": false,
+        "local_goal": {
+          "description": "Place a in table.",
+          "predicates": [
+            "region(a)=table"
+          ],
+          "verifier": "scene_graph_transition"
+        },
+        "parameters": {}
+      },
+      "constraints": [],
+      "metadata": {}
+    }
+  ],
+  "start_id": "S0",
+  "goal_ids": [
+    "G"
+  ],
+  "metadata": {}
+}

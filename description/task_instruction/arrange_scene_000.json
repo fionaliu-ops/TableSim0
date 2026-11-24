@@ -1,0 +1,19 @@
+{
+  "full_description": "arrange the scene_000 desk in order: move the cup from the book to empty space on the left, put the keyboard directly in front of the monitor and the mouse beside the keyboard, then stack the notebook on the book",
+  "schema": "{A} is the monitor; {B} is the cup; {C} is the book; {D} is the keyboard; {E} is the mouse; {F} is the notebook",
+  "preference": "Preserve the required three-stage order. Keep the keyboard centered in front of the monitor, place the mouse near but not overlapping the keyboard, and place the notebook on top of the book without interpenetration.",
+  "seen": [
+    "Move {B} from {C} to the empty left side; place {D} in front of {A} and {E} beside it; stack {F} on {C}.",
+    "First clear the cup to the left, then arrange the keyboard and mouse at the monitor, and finally put the notebook on the book.",
+    "Relocate {B} to open space on the left. Center {D} before {A}, set {E} nearby without overlap, then stack {F} over {C}.",
+    "Clear {C} by moving {B}; organize {D} and {E} in front of {A}; finish by placing {F} squarely on {C}.",
+    "Move the cup left, put the keyboard directly in front of the monitor with the mouse next to it, and stack the notebook on the book.",
+    "Arrange the desk in order: cup to the left, keyboard and mouse at the monitor, notebook on the book."
+  ],
+  "unseen": [
+    "Complete the ordered scene_000 desk arrangement.",
+    "Clear the cup, organize the computer controls, and stack the notebook and book.",
+    "Move {B}, arrange {D} and {E}, then place {F} on {C}.",
+    "Tidy the desk while preserving the required action order."
+  ]
+}
